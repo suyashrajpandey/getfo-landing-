@@ -3,16 +3,114 @@ $color-getfo-400-primary: #09585c;
 $color-getfo-999-black : #050505;
 
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/**********navigation styles***************/
 header{
   background-color: $color-getfo-400-primary;
+  text-align: center;
+  position:fixed;
+  width:100%;
+  z-index:999;
   color:$color-getfo-000-white;
   img{
-    width:30rem;
+    width: 7rem;
+    padding: 0 1rem 0 1rem;
   }
+}
+
+.nav-toggle{
+  display: none;
+}
+
+.nav-toggle-lab{
+  position:absolute;
+  top:0;
+  left:0;
+  margin-left:1em;
+  height:100%;
+  display: flex;
+  align-items: center;
+
+  span,
+  span::before,
+  span::after{
+    display: block;
+    background:white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+  }
+
+  span::before,
+  span::after{
+    content: '';
+    position: absolute;
+  }
+
+  span::before{
+    bottom: 7px;
+  }
+
+  span::after{
+    top: 7px;
+  }
+
 }
 
 
 
+nav{
+  position:absolute;
+  text-align:left;
+  top: 100%;
+  left:0;
+  background-color: $color-getfo-400-primary;
+  width: 100%;
+  transform: scale(1,0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+  ul{
+    margin:0;
+    padding: 0;
+    list-style:none;
+  }
+  li {
+    margin-bottom:1em;
+    margin-left: 1em;
+  }
+  a{
+    color: $color-getfo-000-white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+
+    :hover {
+      color:$color-getfo-999-black;
+    }
+
+  }
+
+}
+
+.nav-toggle:checked ~ nav{
+  transform: scale(1,1);
+  a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
+}
+
+@media screen and (min-width:800px){
+  .nav-toggle-label {
+    display:none;
+  }
+}
 
 
 
@@ -84,3 +182,4 @@ $animationSpeed: 40s;
 }
 
 /**********************************end of slide section**************************/
+

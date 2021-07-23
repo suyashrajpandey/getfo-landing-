@@ -4,36 +4,42 @@ function App() {
   return (
     <div className="App">
       <header>
-        <img src="./Graphics/only-letters-white.png" alt="GetFo logo" />
+        <img src="./Graphics/only-letters-white.png" alt="GetFo logo" className='logo'/>
+        <input type="checkbox" id="nav-toggle" className="nav-toggle" />
         <nav>
           <div>
             <ul>
-              <a href="#About">
-                <span>About</span>
-              </a>
-            </ul>
-            <ul>
-              <a href="#FindExperts">
-                <span>Find Experts</span>
-              </a>
-            </ul>
-            <ul>
-              <a href="#BecomeAnExpert">
-                <span>Become an expert</span>
-              </a>
-            </ul>
-            <ul>
-              <a href="#SignIn">
-                <span></span>Sign In
-              </a>
-            </ul>
-            <ul>
-              <button>
-                <span>Sign Up</span>
-              </button>
+              <li>
+                <a href="#About">
+                  <span>About</span>
+                </a>
+              </li>
+              <li>
+                <a href="#FindExperts">
+                  <span>Find Experts</span>
+                </a>
+              </li>
+              <li>
+                <a href="#BecomeAnExpert">
+                  <span>Become an expert</span>
+                </a>
+              </li>
+              <li>
+                <a href="#SignIn">
+                  <span>Sign In</span>
+                </a>
+              </li>
+              <li>
+                <a href='#SignUp' className='btn btn-primary'>
+                  <span>Sign Up</span>
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
+        <label htmlFor="nav-toggle" className="nav-toggle-lab">
+          <span></span>
+        </label>
       </header>
 
       <section>
@@ -108,50 +114,82 @@ function App() {
             <div className="slide-track">
               <div className="slide"></div>
               <div className="slide">
-                <a className='slide-anchor' href="#eCommerce">
-                  <img className="slideImage" src="./Graphics/Online-store-1.png" alt="eCommerce" />
+                <a className="slide-anchor" href="#eCommerce">
+                  <img
+                    className="slideImage"
+                    src="./Graphics/Online-store-1.png"
+                    alt="eCommerce"
+                  />
                   <h4>eCommerce</h4>
                 </a>
               </div>
               <div className="slide">
-                <a className='slide-anchor' href="#realEstate">
-                  <img className="slideImage" src="./Graphics/Realstates.png" alt="" />
+                <a className="slide-anchor" href="#realEstate">
+                  <img
+                    className="slideImage"
+                    src="./Graphics/Realstates.png"
+                    alt=""
+                  />
                   <h4>Real Estate</h4>
                 </a>
               </div>
               <div className="slide">
-                <a className='slide-anchor' href="#Marketing">
-                  <img className="slideImage" src="./Graphics/Marketing-7e7.png" alt="" />
+                <a className="slide-anchor" href="#Marketing">
+                  <img
+                    className="slideImage"
+                    src="./Graphics/Marketing-7e7.png"
+                    alt=""
+                  />
                   <h4>Marketing</h4>
                 </a>
               </div>
               <div className="slide">
-                <a className='slide-anchor' href="">
-                  <img className="slideImage" src="./Graphics/Investing-.png" alt="" />
+                <a className="slide-anchor" href="">
+                  <img
+                    className="slideImage"
+                    src="./Graphics/Investing-.png"
+                    alt=""
+                  />
                   <h4>Investing</h4>
                 </a>
               </div>
               <div className="slide">
-                <a className='slide-anchor' href="">
-                  <img className="slideImage" src="./Graphics/Recruitment-.png" alt="" />
+                <a className="slide-anchor" href="">
+                  <img
+                    className="slideImage"
+                    src="./Graphics/Recruitment-.png"
+                    alt=""
+                  />
                   <h4>Recruitment</h4>
                 </a>
               </div>
               <div className="slide">
-                <a className='slide-anchor' href="">
-                  <img className="slideImage" src="./Graphics/Blogging-vlogging-.png" alt="" />
+                <a className="slide-anchor" href="">
+                  <img
+                    className="slideImage"
+                    src="./Graphics/Blogging-vlogging-.png"
+                    alt=""
+                  />
                   <h4>Vlogging/Blogging</h4>
                 </a>
               </div>
               <div className="slide">
-                <a className='slide-anchor' href="">
-                  <img className="slideImage" src="./Graphics/Influencers.png" alt="" />
+                <a className="slide-anchor" href="">
+                  <img
+                    className="slideImage"
+                    src="./Graphics/Influencers.png"
+                    alt=""
+                  />
                   <h4>Influencers</h4>
                 </a>
               </div>
               <div className="slide">
-                <a className='slide-anchor' href="">
-                  <img className="slideImage" src="./Graphics/Getfo-uueud.png" alt="" />
+                <a className="slide-anchor" href="">
+                  <img
+                    className="slideImage"
+                    src="./Graphics/Getfo-uueud.png"
+                    alt=""
+                  />
                   <h4>Market Flipping</h4>
                 </a>
               </div>
