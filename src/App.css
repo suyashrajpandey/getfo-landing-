@@ -1,0 +1,98 @@
+header {
+  background-color: #09585c;
+  color: #ffffff;
+}
+
+header img {
+  width: 30rem;
+}
+
+img {
+  max-width: 300px;
+}
+
+/*********************************slide-section***********************************/
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-38rem * 8));
+            transform: translateX(calc(-38rem * 8));
+  }
+}
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-38rem * 8));
+            transform: translateX(calc(-38rem * 8));
+  }
+}
+
+.slide-section {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider {
+  background: white;
+  -webkit-box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+          box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.slider::before, .slider::after {
+  content: "";
+  height: 30rem;
+  position: absolute;
+  width: 30rem;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(4000rem * 16);
+}
+
+.slider .slide {
+  width: 40rem;
+}
+
+.slider .slide .slideImage {
+  width: 15rem;
+}
+
+/**********************************end of slide section**************************/
+/*# sourceMappingURL=App.css.map */

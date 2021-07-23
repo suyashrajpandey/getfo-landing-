@@ -1,0 +1,86 @@
+$color-getfo-000-white : #ffffff;
+$color-getfo-400-primary: #09585c;
+$color-getfo-999-black : #050505;
+
+
+header{
+  background-color: $color-getfo-400-primary;
+  color:$color-getfo-000-white;
+  img{
+    width:30rem;
+  }
+}
+
+
+
+
+
+
+img{
+  max-width : 300px;
+}
+
+
+/*********************************slide-section***********************************/
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-38rem * 8))}
+}
+
+
+// Styling
+.slide-section{
+  align-items: center;
+	background: white;
+	display: flex;
+	justify-content: center;
+}
+
+.slider {
+	background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: auto;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100vw;
+	
+	&::before,
+	&::after {
+		content: "";
+		height: 30rem;
+		position: absolute;
+		width: 30rem;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(4000rem * 16);
+	}
+	
+	.slide {
+		width: 40rem;
+
+    .slideImage{
+      width : 15rem;
+    }
+	}
+}
+
+/**********************************end of slide section**************************/
