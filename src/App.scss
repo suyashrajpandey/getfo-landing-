@@ -294,16 +294,20 @@ nav {
 /**********************************NavBar-End*************************************/
 
 /*********************************slide-section***********************************/
-$animationSpeed: 10s;
+$animationSpeed: 20s;
 
 // Animation
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(calc(-20rem * 3));
+  50% {
+    transform: translateX(calc(-20rem * 4));
   }
+  100%{
+    transform: translateX(0);
+  }
+  
 }
 
 // Styling
@@ -344,9 +348,13 @@ $animationSpeed: 10s;
   }
 
   .slide-track {
-    animation: scroll $animationSpeed linear infinite;
+    animation: scroll $animationSpeed ease-in-out infinite;
     display: flex;
     width: calc(20rem * 8);
+
+    &:hover{
+      animation-play-state: paused;
+    }
 
     .slide {
       width: 20rem;
